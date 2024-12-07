@@ -1,0 +1,35 @@
+@use "./mixin"; // Ruta al archivo de mixins
+@use "./variables" as vars; // Ruta al archivo de variables
+
+.menu {
+  @include mixin.flex-center; // Uso correcto del mixin
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: 10rem;
+  color: black;
+
+  li {
+    margin: 0 15px;
+    a {
+      color: white;
+      text-decoration: none;
+      padding: 0.5rem 1rem;
+    
+      @include mixin.transition(background-color, 0.3s); // Sin prefijo
+    
+      &:hover {
+        background-color: lightblue;
+        border-radius: 5px;
+      }
+    } 
+  }
+}
+
+.menues-principales {
+  text-align: center;
+  color: vars.$primary-color; // Uso correcto de la variable importada
+  font-family:'cursive';
+  font-size: 18px;
+  font-weight: 300;
+}

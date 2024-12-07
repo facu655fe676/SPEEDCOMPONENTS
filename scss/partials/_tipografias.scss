@@ -1,0 +1,42 @@
+@use 'variables' as vars;
+
+p {
+  font-weight: 300;
+  font-size: 1rem; // Unidad relativa
+  font-family: vars.$font-main;
+  color: vars.$black;
+  line-height: 1.5; // Mejora de legibilidad
+}
+
+.txt-1, .txt {
+  color: vars.$text-color;
+  text-align: center;
+  margin: 0;
+}
+
+.txt-1 {
+  font-size: 1.5rem; // Relativo
+  font-weight: bold;
+}
+
+.txt {
+  font-size: 1.125rem; // Relativo
+  color: vars.$black;
+  margin-left: 15.625rem; // Convertido a rem (250px / 16)
+  padding-top: 7.5rem; // Relativo
+  padding-bottom: 1.25rem; // Relativo
+}
+
+.textos-descrip {
+  font-size: 1.25rem; // Relativo
+  text-align: center;
+  font-weight: 700;
+  color: vars.$black;
+  font-family: vars.$font-secondary;
+}
+
+h2 {
+  color: vars.$text-color;
+  font-size: 1.5rem; // Relativo
+  margin-bottom: 1.25rem; // Relativo
+}

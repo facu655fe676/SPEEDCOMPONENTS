@@ -1,0 +1,61 @@
+@use './variables';
+
+body {
+  background-color: variables.$primary-color;
+  color: variables.$secondary-color; // Se agregó el prefijo "variables."
+  font-family: variables.$font-primary;
+}
+
+h1 {
+  text-align: center;
+  font-size: variables.$heading-font-size;
+  text-transform: uppercase;
+  color: variables.$secondary-color;
+}
+
+p {
+  font-weight: 300;
+  font-size: variables.$base-font-size;
+  color: variables.$text-color;
+}
+
+video {
+  width: 560px;
+  height: 560px;
+  margin-left: 20px;
+}
+
+.content-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5px;
+  gap: 80px;
+  width: calc(100% + 40px);
+  max-width: none;
+  margin-left: 5px;
+  margin-right: 5px;
+  background-color:lightblue; // Usamos las variables
+  border: 2px solid black;
+  border-radius: 10px;
+  box-shadow: variables.$box-shadow; // Usamos las variables
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  padding: 20px;
+}
+
+.product-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: lightslategray;
+  box-shadow: variables.$box-shadow;
+  text-align: center;
+}

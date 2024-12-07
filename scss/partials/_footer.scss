@@ -1,0 +1,20 @@
+footer {
+  background-color: lightseagreen;
+  color: #fff;
+  padding: 1rem; // Cambiado a "1rem" para consistencia en el uso de unidades modernas.
+  text-align: center;
+  font-size: 0.9rem;
+
+  p {
+    margin-bottom: 0.5rem; // Cambiado para dar un poco más de espacio entre los párrafos.
+  }
+}
+
+.redes-sociales {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem; // Incrementado para dar un poco más de separación entre elementos.
+}
+
+  

@@ -1,0 +1,28 @@
+@use './variables' as vars; // Importa las variables necesarias
+
+@mixin flex-center($direction: row, $gap: 0) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: $direction;
+  gap: $gap;
+}
+
+@mixin menu-item($hover-bg-color, $hover-text-color: vars.$text-color) {
+  text-decoration: none;
+  color: vars.$text-color;
+  padding: 10px 15px;
+
+  &:hover {
+    background-color: $hover-bg-color;
+    color: $hover-text-color;
+  }
+}
+
+@mixin transition($property, $duration: vars.$transition-time) {
+  transition: $property $duration ease-in-out;
+}
+
+@mixin box-shadow($shadow: vars.$box-shadow) {
+  box-shadow: $shadow;
+}

@@ -1,0 +1,51 @@
+// Reseteo de estilos, cargado primero
+@use './partials/reset' as *;
+
+// Variables y mixins globales
+@use './partials/variables' as vars;
+@use './partials/mixin' as mixins;
+
+// Base y tipografías
+@use './partials/base' as *;
+@use './partials/tipografias' as *;
+
+// Componentes y secciones
+@use './partials/header' as header;
+@use './partials/menu' as menu;
+@use './partials/titles' as titles;
+@use './partials/footer' as footer;
+
+@use './partials/buttons';
+@use './partials/form'as form;
+@use './partials/carousel';
+
+@use './partials/accordion';
+@use './partials/container';
+
+@use './partials/card';
+@use './partials/general';
+@use './partials/card-container';
+@use './partials/media';
+
+// Estilos globales
+body {
+  background-color: vars.$primary-color;
+  color: vars.$text-color;
+  font-family: vars.$font-primary;
+}
+
+h1 {
+  text-align: center;
+  font-size: vars.$heading-font-size;
+  color: vars.$secondary-color;
+}
+
+p {
+  font-size: vars.$base-font-size;
+  line-height: 1.5;
+  color: vars.$text-color;
+}
+
+.button {
+    transition:( property, duration 0.3s);
+}

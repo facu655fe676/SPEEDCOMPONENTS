@@ -1,0 +1,80 @@
+@use './variables' as vars;
+@use '../partials/mixin';
+
+.carousel {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  border: 2px solid black;
+  border-radius: 10px;
+  gap: 600px;
+
+  @include mixin.box-shadow();
+}
+
+.imagen-6 {
+  width: 600px;
+  height: 700px;
+  border: 2px solid black;
+  border-radius: vars.$border-radius;
+  
+  @include mixin.box-shadow(0 4px 6px rgba(0, 0, 0, 0.2));
+  
+  margin: 10px 0;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease;
+  z-index: 10;
+
+  &.carousel-control-prev {
+    left: 10px;
+  }
+
+  &.carousel-control-next {
+    right: 10px;
+  }
+
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  @media (max-width: 768px) {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.carousel {
+  @media (max-width: 768px) {
+    padding: 10px;
+  }
+}
+
+.imagen-6 {
+  @media (max-width: 768px) {
+    max-width: 100%;
+  }
+}
+

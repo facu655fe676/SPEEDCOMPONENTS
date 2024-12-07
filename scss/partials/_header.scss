@@ -1,0 +1,36 @@
+@use './variables' as vars;
+@use '../partials/mixin' as mixins;
+
+header {
+  @include mixins.flex-center(row, 1rem);
+  background-color: vars.$primary-color;
+  padding: 1rem;
+  border-radius: vars.$border-radius;
+
+  .logo {
+    img {
+      height: 50px;
+      width: auto;
+    }
+  }
+
+  .menu {
+    @include mixins.flex-center(row, 2rem);
+    list-style: none;
+    padding: 0;
+
+    li {
+      a {
+        color: vars.$text-color;
+        text-decoration: none;
+
+        @include mixins.transition(color);
+
+        &:hover {
+          color: vars.$hover-color;
+        }
+      }
+    }
+  }
+}
+

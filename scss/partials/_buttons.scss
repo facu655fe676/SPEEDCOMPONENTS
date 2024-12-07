@@ -1,0 +1,53 @@
+@use '../partials/mixin' as mix;
+@use './variables' as vars;
+
+.btn-compra {
+  padding: 10px 20px;
+  background-color: vars.$secondary-color;
+  color: black;
+  border: none;
+  border-radius: vars.$border-radius;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 10px;
+
+
+.button {
+  @include mix.transition(background-color);
+}
+
+  &:hover {
+    background-color: vars.$hover-color;
+  }
+}
+
+button[type="submit"] {
+  background-color: vars.$primary-color;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: vars.$border-radius;
+  cursor: pointer;
+  font-size: 16px;
+
+  @include mix.transition(background-color);
+
+  &:hover {
+    background-color: vars.$hover-color;
+  }
+}
+
+button {
+  align-self: flex-start;
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #0056b3;
+  }
+}

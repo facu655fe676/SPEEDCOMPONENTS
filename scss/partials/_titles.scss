@@ -1,0 +1,57 @@
+// Variables globales
+$secondary-color: #333;
+$font-secondary: 'Arial', sans-serif;
+$primary-color: darkblue; // Ejemplo de uso global
+
+// Mixins (opcional para evitar repetición)
+@mixin text-style($align, $font, $size, $weight: normal, $transform: none) {
+  text-align: $align;
+  font-family: $font;
+  font-size: $size;
+  font-weight: $weight;
+  text-transform: $transform;
+}
+
+// Estilos generales
+.titulo-generales {
+  color: $primary-color; // Un color definido para consistencia
+  @include text-style(center, $font-secondary, 28px, 400);
+}
+
+.menues-principales {
+  @include text-style(center, $font-secondary, 18px, 300);
+  color: $secondary-color; // Uso de variable
+}
+
+.txt {
+  @include text-style(right, $font-secondary, inherit); // Uso del mixin
+}
+
+.txt-1 {
+  margin: 10px;
+  @include text-style(left, $font-secondary, inherit);
+  transform: translateY(50px);
+}
+
+h1 {
+  @include text-style(center, 'Arial', 32px, bold, uppercase);
+  color: $primary-color;
+}
+
+.titles {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 30px;
+}
+
+.title,
+.title-1 {
+  text-align: center;
+  margin: 20px 0;
+  font-size: 1.8rem;
+  font-family: "Oswald", serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
