@@ -1,3 +1,4 @@
+@charset "UTF-8";
 *,
 *::before,
 *::after {
@@ -145,7 +146,7 @@ header .menu {
 header .menu li a {
   color: #333;
   text-decoration: none;
-  transition: color 0.3s ease-in-out;
+  transition: color 0.3s;
 }
 header .menu li a:hover {
   color: #1abc9c;
@@ -170,7 +171,7 @@ header .menu li a:hover {
   color: white;
   text-decoration: none;
   padding: 0.5rem 1rem;
-  transition: background-color 0.3s ease-in-out;
+  transition: background-color 0.3s;
 }
 .menu li a:hover {
   background-color: lightblue;
@@ -277,7 +278,7 @@ footer p {
   margin-top: 10px;
 }
 .btn-compra .button {
-  transition: background-color 0.3s ease-in-out;
+  transition: background-color 0.3s;
 }
 .btn-compra:hover {
   background-color: #1abc9c;
@@ -291,7 +292,7 @@ button[type=submit] {
   border-radius: 4px;
   cursor: pointer;
   font-size: 16px;
-  transition: background-color 0.3s ease-in-out;
+  transition: background-color 0.3s;
 }
 button[type=submit]:hover {
   background-color: #1abc9c;
@@ -613,6 +614,31 @@ video {
     flex-direction: column;
   }
 }
+.rating {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+.rating input {
+  display: none;
+}
+.rating label {
+  font-size: 40px;
+  color: color gray;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+.rating label::before {
+  content: "★";
+}
+.rating input:checked ~ label {
+  color: color orange;
+}
+.rating label:hover,
+.rating label:hover ~ label {
+  color: color orange;
+}
+
 body {
   background-color: #3498db;
   color: #333;

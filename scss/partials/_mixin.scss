@@ -26,3 +26,8 @@
 @mixin box-shadow($shadow: vars.$box-shadow) {
   box-shadow: $shadow;
 }
+
+// partials/_mixin.scss
+@mixin transition($property, $time:0.3s) {
+  transition: $property $time;
+}

@@ -1,0 +1,32 @@
+@use './variables'as v ;
+@use './mixin' as m ;
+
+.rating {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+
+    input {
+        display: none;
+    }
+
+    label {
+        font-size: 40px ; 
+        color: color gray;
+        cursor: pointer;
+        @include m.transition(color, 0.3s); // Usa el mixin correctamente
+
+        &::before {
+            content: '★';
+        }
+    }
+
+    input:checked ~ label {
+        color: color orange;
+    }
+
+    label:hover,
+    label:hover ~ label {
+        color: color orange;
+    }
+}

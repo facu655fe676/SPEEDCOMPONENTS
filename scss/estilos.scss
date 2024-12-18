@@ -27,6 +27,9 @@
 @use './partials/card-container';
 @use './partials/media';
 
+@use './partials/rating' as v;
+
+
 // Estilos globales
 body {
   background-color: vars.$primary-color;
