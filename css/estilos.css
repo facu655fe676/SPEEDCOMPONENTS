@@ -66,6 +66,18 @@ video {
   text-align: center;
 }
 
+.buscador {
+  padding: 20px;
+  margin: 10px auto;
+  border: 2px solid black;
+  max-width: 1200px;
+  box-sizing: border-box;
+  background: radial-gradient(circle, rgb(32, 178, 163), rgb(0, 102, 204), rgb(0, 140, 250));
+  font-family: fantasy;
+  text-align: center;
+  color: black;
+}
+
 p {
   font-weight: 300;
   font-size: 1rem;
@@ -237,7 +249,7 @@ h1 {
 }
 
 footer {
-  background-color: lightseagreen;
+  background: radial-gradient(circle, rgb(228, 228, 228), rgb(133, 133, 133));
   color: #fff;
   padding: 1rem;
   text-align: center;
@@ -489,6 +501,12 @@ form .form-floating label {
   }
 }
 
+.buscador {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
 .card-group {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -542,6 +560,10 @@ form .form-floating label {
   border-top: 1px solid #dee2e6;
 }
 
+.imagen-2 {
+  border: 2px solid black;
+}
+
 label {
   font-weight: bold;
   margin-top: 5px;
@@ -552,6 +574,11 @@ video {
   margin-bottom: 10px;
   border: 1px solid black;
   border-radius: 4px;
+}
+
+.imagen-1, .imagen-2, .imagen-3, .imagen-4, .imagen-5 .img {
+  width: 450px;
+  height: 450px;
 }
 
 .card-container {

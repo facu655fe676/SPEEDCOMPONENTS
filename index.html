@@ -1,19 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Inicio</title>
+    <!-- Metaetiquetas SEO Técnico -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="SPEEDCOMPONENTS: Venta, reacondicionamiento y refacción de componentes de PC. Calidad y accesibilidad al mejor precio.">
+    <meta name="keywords" content="componentes PC, reacondicionamiento, refacción, venta de PCs económicas, SPEEDCOMPONENTS">
+    <meta name="author" content="SpeedComponents">
+    <title>Inicio | SPEEDCOMPONENTS</title>
+    
     <!-- Enlace a Font Awesome desde CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
     <!-- Enlace a tu hoja de estilos local -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-   <!--<link rel="stylesheet" href="./css/styles.css">--> 
+    
     <link rel="stylesheet" href="./css/estilos.css">
+
+    <!-- Datos Estructurados Schema.org (SEO Local) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "SpeedComponents",
+      "description": "Venta, reacondicionamiento y refacción de componentes de PC.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Calle Principal 123",
+        "addressLocality": "Ciudad Ejemplo",
+        "addressRegion": "Provincia",
+        "postalCode": "12345",
+        "addressCountry": "AR"
+      },
+      "telephone": "+1234567890",
+      "url": "https://tusitio.com",
+      "sameAs": [
+        "https://www.instagram.com/erco.facu/"
+      ],
+      "openingHours": "Mo-Fr 09:00-18:00"
+    }
+    </script>
+</head>
 <body>
     <!-- Logo -->
     <div class="logo-1">
-        <img src="./imagenes-videos/favicon-32x32.png" alt="Logotipo">
+        <img src="./imagenes-videos/favicon-32x32.png" alt="Logotipo SpeedComponents">
     </div>
 
     <!-- Título principal -->
@@ -22,7 +53,7 @@
     <!-- Formulario de búsqueda -->
     <form action="./pages/buscar.html" method="get" class="buscador">
         <label for="buscar">Buscar en el sitio:</label>
-        <input type="search" id="buscar" name="query" placeholder="Buscar...">
+        <input type="search" id="buscar" name="query" placeholder="Buscar..." aria-label="Buscar en el sitio">
         <button type="submit">Buscar</button>
     </form>
 
@@ -35,47 +66,59 @@
                 <li><a href="./pages/tienda.html">Tienda</a></li>
                 <li><a href="./pages/servicios.html">Servicios</a></li>
                 <li><a href="./pages/galeria.html">Galería</a></li>
-             </ul>
-         </nav>
-     </header>
-      
-        <!-- Imagen y video -->
+            </ul>
+        </nav>
+    </header>
 
-        <div class="card-container">
-            <!-- Primera tarjeta -->
-            <div class="card">
-              <div class="card-body">
-                <video src="./imagenes-videos/video1.mp4" controls>
-                  Video de muestra
+    <!-- Imagen y video -->
+    <div class="card-container">
+        <!-- Primera tarjeta -->
+        <div class="card">
+            <div class="card-body">
+                <video src="./imagenes-videos/video1.mp4" controls aria-label="Demostración de ensamblado y terminación de PC">
+                    Video de muestra
                 </video>
                 <p class="card-text mt-2">
-                  Aquí hay una demostración de nuestro trabajo en el ensamblado y terminación de las PCs
+                    Aquí hay una demostración de nuestro trabajo en el ensamblado y terminación de las PCs.
                 </p>
-              </div>
             </div>
-          
-            <!-- Segunda tarjeta -->
-            <div class="card">
-              <div class="card-body">
-                <img src="./imagenes-videos/1530513141.png" alt="">
-                  Logo
-                </video>
+        </div>
+      
+        <!-- Segunda tarjeta -->
+        <div class="card">
+            <div class="card-body">
+                <img src="./imagenes-videos/1530513141.png" alt="Logotipo SpeedComponents">
                 <p class="card-text mt-2">
-                  Logotipo identificatorio de nuestra marca 
+                    Logotipo identificatorio de nuestra marca.
                 </p>
-              </div>
             </div>
+        </div>
+    </div>
 
     <!-- Descripción de la empresa -->
-    <p>Nosotros somos una empresa dedicada a la refacción, reacondicionamiento y venta de componentes de PC. Ingresamos al mercado gracias a la creciente demanda de componentes y su elevado valor de venta. Con nuestra experiencia acondicionando componentes, decidimos lanzarnos al mercado como una nueva idea de desarrollo, mejora y accesibilidad al consumidor. Este proyecto está dirigido a personas que desean tener una PC pero, debido a sus presupuestos limitados o situación económica actual, no pueden permitirse una nueva. Nosotros estamos aquí para brindarles esa opción: <strong>SPEEDCOMPONENTS</strong></p>
+    <section>
+        <p>
+            Nosotros somos una empresa dedicada a la refacción, reacondicionamiento y venta de componentes de PC. 
+            Ingresamos al mercado gracias a la creciente demanda de componentes y su elevado valor de venta. Con 
+            nuestra experiencia acondicionando componentes, decidimos lanzarnos al mercado como una nueva idea de 
+            desarrollo, mejora y accesibilidad al consumidor. Este proyecto está dirigido a personas que desean tener 
+            una PC pero, debido a sus presupuestos limitados o situación económica actual, no pueden permitirse una nueva. 
+            Nosotros estamos aquí para brindarles esa opción: <strong>SPEEDCOMPONENTS</strong>.
+        </p>
+    </section>
 
     <!-- Footer -->
     <footer>
-        <p>Este sitio web y todos sus contenidos, incluyendo textos, gráficos, imágenes, logotipos y cualquier otro material digital, están protegidos por derechos de autor conforme a las leyes internacionales de propiedad intelectual © 2024 </p>
+        <p>
+            Este sitio web y todos sus contenidos, incluyendo textos, gráficos, imágenes, logotipos y cualquier otro 
+            material digital, están protegidos por derechos de autor conforme a las leyes internacionales de propiedad 
+            intelectual © 2024 
+        </p>
         <i class="fa-brands fa-instagram"></i>
-        <p><a href="https://www.instagram.com/erco.facu/">Instagram</a></p>
+        <p><a href="https://www.instagram.com/erco.facu/" target="_blank" rel="noopener">Instagram</a></p>
     </footer>
 
+    <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>
