@@ -3,20 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <!-- SEO Técnico -->
+     <meta name="description" content="Explora nuestra tienda de hardware en Buenos Aires. Encuentra GPUs, CPUs, motherboards, fuentes de poder y mucho más. Calidad garantizada y envíos rápidos.">
+     <meta name="keywords" content="tienda hardware, GPUs, CPUs, motherboards, fuentes de poder, memorias RAM, refrigeración líquida, Buenos Aires">
+     <meta name="author" content="Nombre de tu tienda o empresa">
+     <meta name="robots" content="index, follow">
+     <meta property="og:title" content="Tienda de Hardware en Buenos Aires | Calidad Garantizada">
+     <meta property="og:description" content="Descubre nuestra selección de hardware de alta calidad: GPUs, CPUs, memorias RAM y más. Tu mejor opción en Buenos Aires.">
+     <link rel="icon" href="../imagenes-videos/favicon-32x32.png" type="image/png">
+     <meta property="og:url" content="https://www.tusitioweb.com/pages/tienda.html">
+     <meta property="og:type" content="website">
+     <meta name="twitter:card" content="summary_large_image">
+     <title>TIENDA | SPEEDCOMPONENTS</title>
+
+     <!-- SEO Local -->
+    <meta name="geo.region" content="AR-B"> <!-- Argentina - Buenos Aires -->
+    <meta name="geo.placename" content="Buenos Aires, Argentina">
+    <meta name="geo.position" content="-34.603684;-58.381559">
+    <meta name="ICBM" content="-34.603684, -58.381559">
     <title>Tienda</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <!--<link rel="stylesheet" href="../css/styles.css">-->
-    <link rel="stylesheet" href="../css/estilos.css">
+ <!-- Fuentes y estilos -->
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">    
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+ <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+ <link rel="stylesheet" href="../css/estilos.css">
+
+<!-- Datos Estructurados Schema.org (SEO Local) -->
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "SpeedComponents",
+      "description": "Venta, reacondicionamiento y refacción de componentes de PC.",
+      "address": {
+        "@type": "1265",
+        "streetAddress": "Calle Principal 123",
+        "addressLocality": "Ciudad Ejemplo",
+        "addressRegion": "Provincia",
+        "postalCode": "1657",
+        "addressCountry": "AR"
+      },
+      "telephone": "+541144242539",
+        "https://www.instagram.com/erco.facu/"
+      ],
+      "openingHours": "Mo-Fr 09:00-18:00"
+    }
+    </script>
 
 </head>
 <body>
     <!-- Logo -->
     <div class="logo-1">
-        <img src="/imagenes-videos/favicon-32x32.png" alt="Logotipo">
+        <img src="../imagenes-videos/favicon-32x32.png" alt="Logotipo de la empresa">
     </div>
 
     <!-- Título principal -->
@@ -120,6 +160,9 @@
       </div>
 
     <!-- Productos individuales -->
+<main>
+    <section id="productos" class="productos-destacados">
+        <h1>Productos Destacados</h1>
 
     <div class="container overflow-hidden text-center">
         <div class="row gy-5">
@@ -128,7 +171,7 @@
                 <div class="p-3">
                     <section id="gpus" class="product-card">
                         <h2 class="textos-tienda">GPUs</h2>
-                        <img src="../imagenes-videos/th.jpg" alt="PC Armada" class="imagen-2">
+                        <img src="../imagenes-videos/th.jpg" alt="PC Armada" class="imagen-2" loading="lazy">
                         <p>Tarjeta gráfica reformada y mejorada</p>
                         <button class="btn-compra">Comprar</button>
                     </section>
@@ -140,7 +183,7 @@
                 <div class="p-3">
                     <section id="cpus" class="product-card">
                         <h2 class="textos-tienda">CPUs</h2>
-                        <img src="../imagenes-videos/th (1).jpg" alt="CPUs" class="imagen-2">
+                        <img src="../imagenes-videos/th (1).jpg" alt="CPUs" class="imagen-2" loading="lazy">
                         <p>CPU Intel i7 7700k</p>
                         <button class="btn-compra">Comprar</button>
                     </section>
@@ -152,7 +195,7 @@
                 <div class="p-3">
                     <section id="motherboards" class="product-card">
                         <h2 class="textos-tienda">Motherboards</h2>
-                        <img src="../imagenes-videos/msi_b650mp_b650m_p_m_atx_motherboard_1771747.jpg" alt="Motherboard" class="imagen-4">
+                        <img src="../imagenes-videos/msi_b650mp_b650m_p_m_atx_motherboard_1771747.jpg" alt="Motherboard" class="imagen-4" loading="lazy">
                         <p>Motherboard MSI B650MP ATX</p>
                         <button class="btn-compra">Comprar</button>
                     </section>
@@ -164,7 +207,7 @@
                 <div class="p-3">
                     <section id="power-supply" class="product-card">
                         <h2 class="textos-tienda">Power Supply</h2>
-                        <img src="../imagenes-videos/fuente-de-poder-pc-500w-atx-slim-edge-systems-s500-es-05002-D_NQ_NP_724212-MLM28133394809_092018-F.jpg" alt="Power Supply" class="imagen-4">
+                        <img src="../imagenes-videos/fuente-de-poder-pc-500w-atx-slim-edge-systems-s500-es-05002-D_NQ_NP_724212-MLM28133394809_092018-F.jpg" alt="Power Supply" class="imagen-4" loading="lazy">
                         <p>Fuente de poder PC 500W ATX Slim Edge</p>
                         <button class="btn-compra">Comprar</button>
                     </section>
@@ -176,7 +219,7 @@
                 <div class="p-3">
                     <section id="gabinetes" class="product-card">
                         <h2 class="textos-tienda">Gabinete</h2>
-                        <img src="../imagenes-videos/gabinete-jpg.jpg" alt="gabinete" class="imagen-4">
+                        <img src="../imagenes-videos/gabinete-jpg.jpg" alt="gabinete" class="imagen-4" loading="lazy">
                         <p>Gabinete gamer con RGB</p>
                         <button class="btn-compra">Comprar</button>
                     </section>
@@ -188,7 +231,7 @@
                 <div class="p-3">
                     <section id="refrigeracion-liquida" class="product-card">
                         <h2 class="textos-tienda">Refrigeración líquida</h2>
-                        <img src="../imagenes-videos/refrigeracion-liquida.jpg" alt="refrigeracion-liquida" class="imagen-4">
+                        <img src="../imagenes-videos/refrigeracion-liquida.jpg" alt="refrigeracion-liquida" class="imagen-4" loading="lazy">
                         <p>Refrigeración MasterLiquid ML240L</p>
                         <button class="btn-compra">Comprar</button>
                     </section>
@@ -200,7 +243,7 @@
                 <div class="p-3">
                     <section id="memorias-ram" class="product-card">
                         <h2 class="textos-tienda">Memorias RAM</h2>
-                        <img src="../imagenes-videos/memorias-ram.jpg" alt="memorias-ram" class="imagen-4">
+                        <img src="../imagenes-videos/memorias-ram.jpg" alt="memorias-ram" class="imagen-4" loading="lazy">
                         <p>Memorias RAM Kingston Fury DDR5 32GB</p>
                         <button class="btn-compra">Comprar</button>
                     </section>
@@ -212,7 +255,7 @@
                 <div class="p-3">
                     <section id="pasta-termica" class="product-card">
                         <h2 class="textos-tienda">Pasta térmica</h2>
-                        <img src="../imagenes-videos/pasta-termica.jpg" alt="pasta-termica" class="imagen-4">
+                        <img src="../imagenes-videos/pasta-termica.jpg" alt="pasta-termica" class="imagen-4" loading="lazy">
                         <p>Pasta térmica Corsair</p>
                         <button class="btn-compra">Comprar</button>
                     </section>
@@ -220,7 +263,7 @@
             </div>
         </div>
     </div>
-    
+</main>
             
     <!-- Formulario de comentarios -->
     <section>

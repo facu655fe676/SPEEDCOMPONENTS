@@ -15,3 +15,15 @@ label {
     width: 450px;
     height: 450px;
 }
+
+$bg-main: #3498db; // Define un color para la variable
+
+main {
+  padding: 2rem;
+  background-color: $bg-main; // Usa la variable definida
+}
+
+section {
+  margin-top: 1rem;
+  padding: 1rem;
+}
