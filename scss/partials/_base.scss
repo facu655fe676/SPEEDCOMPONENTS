@@ -20,22 +20,23 @@ p {
 }
 
 video {
-  width: 560px;
-  height: 560px;
-  margin-left: 20px;
+  width: 100%;
+  max-width: 560px;
+  height: auto;
+  margin: 20px auto;
+  display: block;
 }
 
 .content-section {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 5px;
-  gap: 80px;
-  width: calc(100% + 40px);
-  max-width: none;
-  margin-left: 5px;
-  margin-right: 5px;
-  background-color:lightblue; // Usamos las variables
+  padding: 10px;
+  gap: 40px;
+  width: calc(100% - 10px);
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: lightblue; // Usamos las variables
   border: 2px solid black;
   border-radius: 10px;
   box-shadow: variables.$box-shadow; // Usamos las variables
@@ -43,7 +44,7 @@ video {
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 20px;
   padding: 20px;
 }
@@ -61,13 +62,78 @@ video {
 }
 
 .buscador {
-  padding: 20px; 
-  margin: 10px auto; 
-  border: 2px solid black; 
-  max-width: 1200px; 
-  box-sizing: border-box; 
+  padding: 20px;
+  margin: 10px auto;
+  border: 2px solid black;
+  max-width: 100%;
+  box-sizing: border-box;
   background: radial-gradient(circle, rgb(32, 178, 163), rgb(0, 102, 204), rgb(0, 140, 250));
   font-family: fantasy;
   text-align: center;
   color: black;
+}
+
+// Responsividad
+@media (max-width: 767px) {
+  // Mobile
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  .content-section {
+    padding: 5px;
+    gap: 20px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .product-card {
+    padding: 10px;
+  }
+
+  video {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  // Tablet
+  h1 {
+    font-size: 2rem;
+  }
+
+  .content-section {
+    padding: 10px;
+    gap: 30px;
+  }
+
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+
+  .product-card {
+    padding: 15px;
+  }
+}
+
+@media (min-width: 1024px) {
+  // Desktop
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  .content-section {
+    padding: 20px;
+    gap: 40px;
+  }
+
+  .grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
 }

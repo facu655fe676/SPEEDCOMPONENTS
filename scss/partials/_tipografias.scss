@@ -3,7 +3,7 @@
 p {
   font-weight: 300;
   font-size: 1rem; // Unidad relativa
-  font-family: vars.$font-main;
+  font-family: "Arial", sans-serif;
   color: vars.$black;
   line-height: 1.5; // Mejora de legibilidad
 }
@@ -17,6 +17,14 @@ p {
 .txt-1 {
   font-size: 1.5rem; // Relativo
   font-weight: bold;
+
+  @media (max-width: 1024px) { // Tablet
+    font-size: 1.25rem; // Ajuste para pantallas medianas
+  }
+
+  @media (max-width: 768px) { // Móvil
+    font-size: 1rem; // Tamaño más pequeño
+  }
 }
 
 .txt {
@@ -25,6 +33,20 @@ p {
   margin-left: 15.625rem; // Convertido a rem (250px / 16)
   padding-top: 7.5rem; // Relativo
   padding-bottom: 1.25rem; // Relativo
+
+  @media (max-width: 1024px) { // Tablet
+    font-size: 1rem; // Ajuste del tamaño del texto
+    margin-left: 5rem; // Reduce el margen izquierdo
+    padding-top: 5rem; // Reduce el espacio superior
+    padding-bottom: 1rem; // Ajusta el espacio inferior
+  }
+
+  @media (max-width: 768px) { // Móvil
+    font-size: 0.875rem; // Texto más pequeño
+    margin-left: 0; // Elimina el margen izquierdo
+    padding-top: 2rem; // Ajusta el padding superior
+    padding-bottom: 0.5rem; // Menos padding inferior
+  }
 }
 
 .textos-descrip {
@@ -33,10 +55,27 @@ p {
   font-weight: 700;
   color: vars.$black;
   font-family: vars.$font-secondary;
+
+  @media (max-width: 1024px) { // Tablet
+    font-size: 1.125rem; // Ajuste del tamaño del texto
+  }
+
+  @media (max-width: 768px) { // Móvil
+    font-size: 1rem; // Texto más pequeño para móviles
+  }
 }
 
 h2 {
   color: vars.$text-color;
   font-size: 1.5rem; // Relativo
   margin-bottom: 1.25rem; // Relativo
+
+  @media (max-width: 1024px) { // Tablet
+    font-size: 1.25rem; // Reducir tamaño del título
+  }
+
+  @media (max-width: 768px) { // Móvil
+    font-size: 1rem; // Tamaño pequeño para dispositivos móviles
+    margin-bottom: 1rem; // Ajuste del margen
+  }
 }

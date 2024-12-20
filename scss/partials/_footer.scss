@@ -1,12 +1,24 @@
 footer {
   background: radial-gradient(circle, rgb(228, 228, 228), rgb(133, 133, 133));
   color: #fff;
-  padding: 1rem; // Cambiado a "1rem" para consistencia en el uso de unidades modernas.
+  padding: 1rem;
   text-align: center;
   font-size: 0.9rem;
 
   p {
-    margin-bottom: 0.5rem; // Cambiado para dar un poco más de espacio entre los párrafos.
+    margin-bottom: 0.5rem;
+  }
+
+  // Responsividad para tablet
+  @media (max-width: 768px) {
+    padding: 0.8rem; // Reduce el padding en pantallas más pequeñas
+    font-size: 0.85rem; // Ajusta el tamaño de la fuente
+  }
+
+  // Responsividad para móvil
+  @media (max-width: 480px) {
+    padding: 0.5rem;
+    font-size: 0.8rem; // Reduce aún más el tamaño de la fuente
   }
 }
 
@@ -14,7 +26,42 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 1rem; // Incrementado para dar un poco más de separación entre elementos.
-}
+  gap: 1rem;
 
-  
+  a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px; // Tamaño estándar de los iconos
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.4);
+    }
+  }
+
+  // Responsividad para tablet
+  @media (max-width: 768px) {
+    gap: 0.8rem; // Reduce el espacio entre iconos
+    a {
+      width: 35px;
+      height: 35px; // Iconos más pequeños
+    }
+  }
+
+  // Responsividad para móvil
+  @media (max-width: 480px) {
+    flex-direction: column; // Los iconos se apilan verticalmente
+    gap: 0.5rem;
+
+    a {
+      width: 30px;
+      height: 30px; // Iconos aún más pequeños
+    }
+  }
+}

@@ -1,35 +1,69 @@
-@use "./mixin"; // Ruta al archivo de mixins
-@use "./variables" as vars; // Ruta al archivo de variables
+@use './variables' as vars;
+@use '../partials/mixin' as mixins;
 
-.menu {
-  @include mixin.flex-center; // Uso correcto del mixin
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  gap: 10rem;
-  color: black;
+header {
+  @include mixins.flex-center(row, 1rem);
+  background-color: vars.$primary-color;
+  padding: 1rem;
+  border-radius: vars.$border-radius;
 
-  li {
-    margin: 0 15px;
-    a {
-      color: white;
-      text-decoration: none;
-      padding: 0.5rem 1rem;
-    
-      @include mixin.transition(background-color, 0.3s); // Sin prefijo
-    
-      &:hover {
-        background-color: lightblue;
-        border-radius: 5px;
+  .logo {
+    img {
+      height: 50px;
+      width: auto;
+    }
+  }
+
+  .menu {
+    @include mixins.flex-center(row, 2rem);
+    list-style: none;
+    padding: 0;
+
+    li {
+      a {
+        color: vars.$text-color;
+        text-decoration: none;
+
+        @include mixins.transition(color);
+
+        &:hover {
+          color: vars.$hover-color;
+        }
       }
-    } 
+    }
+  }
+
+  // Responsividad
+  @media (max-width: 1024px) { // Tablet y menor
+    .menu {
+      @include mixins.flex-center(column, 1rem); // Cambia el diseño a columna
+    }
+
+    li {
+      a {
+        font-size: 1rem; // Ajusta el tamaño de fuente para tablets
+      }
+    }
+  }
+
+  @media (max-width: 768px) { // Mobile
+    padding: 0.5rem;
+
+    .logo {
+      img {
+        height: 40px; // Reduce el tamaño del logo
+      }
+    }
+
+    .menu {
+      @include mixins.flex-center(column, 0.5rem);
+    }
+
+    li {
+      a {
+        font-size: 0.9rem; // Fuente más pequeña para móviles
+      }
+    }
   }
 }
 
-.menues-principales {
-  text-align: center;
-  color: vars.$primary-color; // Uso correcto de la variable importada
-  font-family:'cursive';
-  font-size: 18px;
-  font-weight: 300;
-}

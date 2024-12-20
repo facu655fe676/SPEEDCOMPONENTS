@@ -1,32 +1,56 @@
-@use './variables'as v ;
-@use './mixin' as m ;
+@use './variables' as v; // Variables
+@use './mixin' as m; // Mixins
 
 .rating {
-    display: flex;
-    justify-content: center;
-    margin: 20px 0;
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
 
-    input {
-        display: none;
+  input {
+    display: none;
+  }
+
+  label {
+    font-size: 40px;
+    color: gray;
+    cursor: pointer;
+    @include m.transition(color, 0.3s); // Usa el mixin correctamente
+
+    &::before {
+      content: '★';
     }
+  }
+
+  input:checked ~ label {
+    color: orange;
+  }
+
+  label:hover,
+  label:hover ~ label {
+    color: orange;
+  }
+
+  // Responsividad
+  @media (max-width: 1024px) { // Tablet
+    label {
+      font-size: 30px; // Ajusta tamaño de las estrellas
+    }
+
+    .rating {
+      margin: 15px 0; // Reduce el margen
+    }
+  }
+
+  @media (max-width: 768px) { // Mobile
+    flex-direction: column; // Cambia la disposición a columna
+    align-items: center; // Centra las estrellas en móviles
 
     label {
-        font-size: 40px ; 
-        color: color gray;
-        cursor: pointer;
-        @include m.transition(color, 0.3s); // Usa el mixin correctamente
-
-        &::before {
-            content: '★';
-        }
+      font-size: 25px; // Reduce más el tamaño de las estrellas
     }
 
-    input:checked ~ label {
-        color: color orange;
+    .rating {
+      margin: 10px 0; // Márgenes más pequeños para móviles
     }
-
-    label:hover,
-    label:hover ~ label {
-        color: color orange;
-    }
+  }
 }

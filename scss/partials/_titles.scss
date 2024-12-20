@@ -3,6 +3,10 @@ $secondary-color: #333;
 $font-secondary: 'Arial', sans-serif;
 $primary-color: darkblue; // Ejemplo de uso global
 
+// Breakpoints
+$breakpoint-mobile: 768px;
+$breakpoint-tablet: 1024px;
+
 // Mixins (opcional para evitar repetición)
 @mixin text-style($align, $font, $size, $weight: normal, $transform: none) {
   text-align: $align;
@@ -16,11 +20,27 @@ $primary-color: darkblue; // Ejemplo de uso global
 .titulo-generales {
   color: $primary-color; // Un color definido para consistencia
   @include text-style(center, $font-secondary, 28px, 400);
+
+  @media (max-width: $breakpoint-tablet) {
+    font-size: 24px;
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    font-size: 20px;
+  }
 }
 
 .menues-principales {
   @include text-style(center, $font-secondary, 18px, 300);
   color: $secondary-color; // Uso de variable
+
+  @media (max-width: $breakpoint-tablet) {
+    font-size: 16px;
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    font-size: 14px;
+  }
 }
 
 .txt {
@@ -31,11 +51,23 @@ $primary-color: darkblue; // Ejemplo de uso global
   margin: 10px;
   @include text-style(left, $font-secondary, inherit);
   transform: translateY(50px);
+
+  @media (max-width: $breakpoint-mobile) {
+    transform: translateY(20px);
+  }
 }
 
 h1 {
   @include text-style(center, 'Arial', 32px, bold, uppercase);
   color: $primary-color;
+
+  @media (max-width: $breakpoint-tablet) {
+    font-size: 28px;
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    font-size: 24px;
+  }
 }
 
 .titles {
@@ -43,6 +75,11 @@ h1 {
   flex-direction: row;
   align-items: center;
   gap: 30px;
+
+  @media (max-width: $breakpoint-tablet) {
+    flex-direction: column;
+    gap: 20px;
+  }
 }
 
 .title,
@@ -54,6 +91,14 @@ h1 {
   font-optical-sizing: auto;
   font-weight: 700;
   font-style: normal;
+
+  @media (max-width: $breakpoint-tablet) {
+    font-size: 1.6rem;
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    font-size: 1.4rem;
+  }
 }
 
 h1 {
@@ -62,4 +107,12 @@ h1 {
   color: $primary-color;
   text-align: center;
   margin-bottom: 1.5rem;
+
+  @media (max-width: $breakpoint-tablet) {
+    font-size: 2rem;
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    font-size: 1.8rem;
+  }
 }

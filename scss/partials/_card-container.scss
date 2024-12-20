@@ -1,29 +1,61 @@
 .card-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-    justify-items: center;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  justify-items: center;
+  padding: 20px;
+
+  .card {
+    width: 18rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     padding: 20px;
-  
-    .card {
-      width: 18rem;
+    box-shadow: 0 4px 8px lightgrey;
+    border-radius: 8px;
+    border: 2px solid black;
+    background-color: whitesmoke;
+
+    .card-body {
+      width: 100%;
+      text-align: center;
       display: flex;
       flex-direction: column;
-      justify-content: center;
       align-items: center;
-      padding: 20px;
-      box-shadow: 0 4px 8px lightgrey;
-      border-radius: 8px;
-      border: 2px solid black;
-      background-color: whitesmoke;
-  
-      .card-body {
-        width: 100%;
-        text-align: center;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-      }
     }
   }
-  
+
+  // Responsividad para tablet
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr; // Pasa a una columna
+    padding: 15px;
+
+    .card {
+      width: 16rem; // Reduce el ancho de las tarjetas
+    }
+  }
+
+  // Responsividad para móvil
+  @media (max-width: 480px) {
+    grid-template-columns: 1fr; // Mantiene una columna
+    padding: 10px;
+
+    .card {
+      width: 14rem; // Reduce aún más el ancho de las tarjetas
+      padding: 15px; // Reduce el padding de las tarjetas
+    }
+  }
+
+  // Responsividad para desktop
+  @media (min-width: 1200px) {
+    grid-template-columns: repeat(4, 1fr); // Cuatro columnas para pantallas grandes
+    gap: 30px; // Más espacio entre las tarjetas
+    padding: 40px;
+
+    .card {
+      width: 20rem; // Tarjetas más anchas
+      padding: 25px; // Más espacio interior
+    }
+  }
+}

@@ -1,45 +1,80 @@
 .accordion-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: stretch;
-    padding: 20px;
-    margin: 20px auto;
-    border: 2px solid #000000;
-    border-radius: 10px;
-    max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  padding: 20px;
+  margin: 20px auto;
+  border: 2px solid #000000;
+  border-radius: 10px;
+  max-width: 600px;
+  background-color: lightgray;
+
+  .accordion-item {
+    margin-bottom: 10px;
+  }
+
+  .accordion-button {
+    padding: 15px;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: lightgrey;
+    }
+  }
+
+  .accordion-body {
+    padding: 15px;
     background-color: lightgray;
-  
-    .accordion-item {
-      margin-bottom: 10px;
-    }
-  
-    .accordion-button {
-      padding: 15px;
-      font-size: 16px;
-      border-radius: 5px;
-      transition: background-color 0.3s ease;
-  
+    border: 1px solid white;
+    border-radius: 5px;
+    font-size: 14px;
+
+    a {
+      color: rgb(55, 0, 255);
+      text-decoration: none;
+
       &:hover {
-        background-color: lightgrey;
-      }
-    }
-  
-    .accordion-body {
-      padding: 15px;
-      background-color: lightgray;
-      border: 1px solid white;
-      border-radius: 5px;
-      font-size: 14px;
-  
-      a {
-        color: rgb(55, 0, 255);
-        text-decoration: none;
-  
-        &:hover {
-          text-decoration: underline;
-        }
+        text-decoration: underline;
       }
     }
   }
-  
+
+  // Responsividad
+  @media (max-width: 767px) {
+    /* Mobile */
+    padding: 10px;
+    margin: 10px auto;
+
+    .accordion-button {
+      font-size: 14px;
+      padding: 10px;
+    }
+
+    .accordion-body {
+      font-size: 12px;
+    }
+  }
+
+  @media (min-width: 768px) and (max-width: 1023px) {
+    /* Tablet */
+    padding: 15px;
+    margin: 15px auto;
+
+    .accordion-button {
+      font-size: 15px;
+      padding: 12px;
+    }
+
+    .accordion-body {
+      font-size: 13px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    /* Desktop */
+    max-width: 800px; /* Ajuste para pantallas grandes */
+  }
+}

@@ -12,6 +12,18 @@
   gap: 600px;
 
   @include mixin.box-shadow();
+
+  // Responsividad para tablet
+  @media (max-width: 768px) {
+    padding: 15px;
+    gap: 300px; // Reduce el espacio entre elementos
+  }
+
+  // Responsividad para móvil
+  @media (max-width: 480px) {
+    padding: 10px;
+    gap: 200px; // Reduce aún más el espacio
+  }
 }
 
 .imagen-6 {
@@ -19,10 +31,21 @@
   height: 700px;
   border: 2px solid black;
   border-radius: vars.$border-radius;
-  
-  @include mixin.box-shadow(0 4px 6px rgba(0, 0, 0, 0.2));
-  
   margin: 10px 0;
+
+  @include mixin.box-shadow(0 4px 6px rgba(0, 0, 0, 0.2));
+
+  // Responsividad para tablet
+  @media (max-width: 768px) {
+    width: 100%; // Escala al ancho del contenedor
+    height: auto; // Permite altura dinámica
+  }
+
+  // Responsividad para móvil
+  @media (max-width: 480px) {
+    width: 100%; // Escala completamente en móviles
+    height: auto;
+  }
 }
 
 .carousel-control-prev,
@@ -60,21 +83,28 @@
     height: 20px;
   }
 
+  // Responsividad para tablet
   @media (max-width: 768px) {
     width: 40px;
     height: 40px;
-  }
-}
 
-.carousel {
-  @media (max-width: 768px) {
-    padding: 10px;
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+      width: 16px; // Reduce el tamaño de los iconos
+      height: 16px;
+    }
   }
-}
 
-.imagen-6 {
-  @media (max-width: 768px) {
-    max-width: 100%;
+  // Responsividad para móvil
+  @media (max-width: 480px) {
+    width: 30px;
+    height: 30px;
+
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+      width: 12px;
+      height: 12px; // Más pequeños para móviles
+    }
   }
 }
 

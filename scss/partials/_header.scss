@@ -32,5 +32,39 @@ header {
       }
     }
   }
+
+  // Responsividad
+  @media (max-width: 1024px) { // Tablet y menor
+    .menu {
+      @include mixins.flex-center(column, 1rem); // Cambia el diseño a columna
+    }
+
+    li {
+      a {
+        font-size: 1rem; // Ajusta el tamaño de fuente para tablets
+      }
+    }
+  }
+
+  @media (max-width: 768px) { // Mobile
+    padding: 0.5rem;
+
+    .logo {
+      img {
+        height: 40px; // Reduce el tamaño del logo
+      }
+    }
+
+    .menu {
+      @include mixins.flex-center(column, 0.5rem);
+    }
+
+    li {
+      a {
+        font-size: 0.9rem; // Fuente más pequeña para móviles
+      }
+    }
+  }
 }
+
 

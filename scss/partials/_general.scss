@@ -1,29 +1,72 @@
-label {
-    font-weight: bold;
-    margin-top: 5px;
-  }
-  
-  video {
-    max-width: 100%;
-    margin-bottom: 10px;
-    border: 1px solid black;
-    border-radius: 4px;
-  }
-  
+$bg-main: #3498db; // Define un color para la variable
 
-  .imagen-1, .imagen-2, .imagen-3, .imagen-4, .imagen-5 .img {
-    width: 450px;
-    height: 450px;
+label {
+  font-weight: bold;
+  margin-top: 5px;
+
+  @media (max-width: 768px) {
+    font-size: 0.9rem; // Reduce ligeramente el tamaño de fuente en tabletas
+  }
+
+  @media (max-width: 480px) {
+    font-size: 0.8rem; // Reduce aún más el tamaño de fuente en móviles
+  }
 }
 
-$bg-main: #3498db; // Define un color para la variable
+video {
+  max-width: 100%;
+  margin-bottom: 10px;
+  border: 1px solid black;
+  border-radius: 4px;
+
+  @media (max-width: 768px) {
+    margin-bottom: 8px; // Reduce el espacio inferior
+  }
+
+  @media (max-width: 480px) {
+    margin-bottom: 5px; // Aún menos margen para pantallas pequeñas
+  }
+}
+
+.imagen-1, .imagen-2, .imagen-3, .imagen-4, .imagen-5, .img {
+  width: 450px;
+  height: 450px;
+
+  @media (max-width: 768px) {
+    width: 300px; // Reduce el tamaño de las imágenes en tabletas
+    height: 300px;
+  }
+
+  @media (max-width: 480px) {
+    width: 100%; // Las imágenes ocupan el ancho completo en móviles
+    height: auto; // Mantén la proporción de las imágenes
+  }
+}
 
 main {
   padding: 2rem;
-  background-color: $bg-main; // Usa la variable definida
+  background-color: $bg-main;
+
+  @media (max-width: 768px) {
+    padding: 1.5rem; // Reduce el padding en tabletas
+  }
+
+  @media (max-width: 480px) {
+    padding: 1rem; // Padding más compacto en móviles
+  }
 }
 
 section {
   margin-top: 1rem;
   padding: 1rem;
+
+  @media (max-width: 768px) {
+    margin-top: 0.8rem;
+    padding: 0.8rem; // Ajustes menores para tabletas
+  }
+
+  @media (max-width: 480px) {
+    margin-top: 0.5rem;
+    padding: 0.5rem; // Ajustes más compactos para móviles
+  }
 }
